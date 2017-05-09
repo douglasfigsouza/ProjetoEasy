@@ -21,27 +21,33 @@ namespace ProjetoEasy.Models
 
         public int? CIDADEID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="O campo Nome é obrigatório,digite-o!")]
         [StringLength(200)]
+        [Display(Name ="Digite seu Nome")]
         public string NOME_PROG { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo Telefone é obrigatório,digite-o!")]
         [StringLength(15)]
+        [Display(Name ="Digite o Telefone")]
         public string FONE_PROG { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo Skype é obrigatório,digite-o!")]
         [StringLength(200)]
+        [Display(Name ="Digite seu usuário no Skype")]
         public string SKYPE_PROG { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo Linkedin é obrigatório,digite-o!")]
         [StringLength(200)]
+        [Display(Name ="Digite seu usário no Linkedin")]
         public string LINKEDIN_PROG { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo Email é obrigatório,digite-o!")]
         [StringLength(200)]
+        [Display(Name ="Digite o Email")]
         public string EMAIL_PROG { get; set; }
 
         [StringLength(8000)]
+        [Display(Name ="Digite seu Portifólio")]
         public string PORTIFOLIO_PROG { get; set; }
 
         [Required]
