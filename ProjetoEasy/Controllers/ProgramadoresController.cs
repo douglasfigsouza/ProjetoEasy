@@ -9,7 +9,7 @@ namespace ProjetoEasy.Controllers
     public class ProgramadoresController : Controller
     {
         // GET: Programadores
-        public ActionResult Index()
+        public ActionResult Add_Programador()
         {
             return View();
         }
