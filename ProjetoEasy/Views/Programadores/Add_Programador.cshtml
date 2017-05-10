@@ -9,19 +9,22 @@
         {
             @Html.ValidationSummary(true)
             {
-               <fieldset >
+               <fieldset>
                    <legend>@ViewBag.Legend</legend>
-                   <div class="form-group col-md-12">
+                   <div class="form-group col-md-4">
                        @Html.LabelFor(m=>m.NOME_PROG,new { @class="col-md-12 control-label"})
                        @Html.TextBoxFor(m => m.NOME_PROG, new { @class = "input_android col-md-12",@ng_model="Nome", @placeholder = "Nome/Name", ng_required = "Nome" })
                        @Html.ValidationMessageFor(m=>m.NOME_PROG)
                    </div>
-                   <div class="form-group col-md-12">
+                   <div class="form-group col-md-4">
+                       @Html.Label("Estados", new { @class="control-label col-md-12"})
+                       @Html.DropDownList("EstadoId", new SelectList(@ViewBag.Estados, "ESTADOID", "SIGLA"), new { @class = "form-control", ng_model = "EstadoSelecionado" })
+                   </div>
+                   <div class="form-group col-md-4">
                        @Html.LabelFor(m => m.EMAIL_PROG, new { @class = "col-md-12 control-label" })
                        @Html.TextBoxFor(m => m.EMAIL_PROG, new { @class = "input_android col-md-12", @ng_model = "Email", @placeholder = "Seu Email", ng_required = "Email" })
                        @Html.ValidationMessageFor(m => m.EMAIL_PROG)
                    </div>
-                   <div></div>
                </fieldset>
             }
         }

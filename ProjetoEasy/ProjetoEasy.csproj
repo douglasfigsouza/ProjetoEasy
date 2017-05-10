@@ -179,6 +179,9 @@
     <Content Include="scripts\errors.json" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\Gesprog.sql" />
+    <Content Include="scripts\Gesprog\Controller.js" />
+    <Content Include="scripts\Gesprog\Modules.js" />
+    <Content Include="scripts\Gesprog\Service.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
@@ -194,6 +197,7 @@
     </Compile>
     <Compile Include="Models\BANCO.cs" />
     <Compile Include="Models\CIDADE.cs" />
+    <Compile Include="Models\EstadosRepository.cs" />
     <Compile Include="Models\CONTAS_BANCARIAS.cs" />
     <Compile Include="Models\ESTADO.cs" />
     <Compile Include="Models\Gesprog.cs" />
