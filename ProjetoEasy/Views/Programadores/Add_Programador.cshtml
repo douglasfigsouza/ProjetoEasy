@@ -1,7 +1,29 @@
-﻿
+﻿@model ProjetoEasy.Models.PROGRAMADORES
 @{
-    ViewBag.Title = "Cadastro de Programador";
+    ViewBag.Title = "Cadastro de Programadores";
 }
 
-<h2>Add_Programador</h2>
+<div class="container">
+    <div class="row col-md-12">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            {
+               <fieldset >
+                   <legend>@ViewBag.Legend</legend>
+                   <div class="form-group col-md-12">
+                       @Html.LabelFor(m=>m.NOME_PROG,new { @class="col-md-12 control-label"})
+                       @Html.TextBoxFor(m => m.NOME_PROG, new { @class = "input_android col-md-12",@ng_model="Nome", @placeholder = "Nome/Name", ng_required = "Nome" })
+                       @Html.ValidationMessageFor(m=>m.NOME_PROG)
+                   </div>
+                   <div class="form-group col-md-12">
+                       @Html.LabelFor(m => m.EMAIL_PROG, new { @class = "col-md-12 control-label" })
+                       @Html.TextBoxFor(m => m.EMAIL_PROG, new { @class = "input_android col-md-12", @ng_model = "Email", @placeholder = "Seu Email", ng_required = "Email" })
+                       @Html.ValidationMessageFor(m => m.EMAIL_PROG)
+                   </div>
+               </fieldset>
+            }
+        }
+    </div>
+</div>
 

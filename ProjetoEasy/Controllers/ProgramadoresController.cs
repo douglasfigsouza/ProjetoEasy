@@ -11,6 +11,7 @@ namespace ProjetoEasy.Controllers
         // GET: Programadores
         public ActionResult Add_Programador()
         {
+            ViewBag.Legend = "Cadastrar Programador";
             return View();
         }
     }
