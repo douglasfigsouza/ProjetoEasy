@@ -18,7 +18,13 @@
                    </div>
                    <div class="form-group col-md-4">
                        @Html.Label("Estados", new { @class="control-label col-md-12"})
-                       @Html.DropDownList("EstadoId", new SelectList(@ViewBag.Estados, "ESTADOID", "SIGLA"), new { @class = "form-control", ng_model = "EstadoSelecionado" })
+                       @Html.DropDownList("EstadoId", new SelectList(@ViewBag.Estados, "ESTADOID", "SIGLA"), new { @class = "form-control", ng_model = "EstadoSelecionado"})
+                   </div>
+                   {{EstadoSelecionado}}
+                   <div class="form-control col-md-4">
+                       <select ng-options="Item.Nome for Item in EstadoSelecionado.cidades track by p.CIDADEID" ng-model="CidadeSelecionada">
+                           <option value="">Selecione</option>
+                       </select>
                    </div>
                    <div class="form-group col-md-4">
                        @Html.LabelFor(m => m.EMAIL_PROG, new { @class = "col-md-12 control-label" })

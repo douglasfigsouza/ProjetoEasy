@@ -191,12 +191,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CidadesController.cs" />
     <Compile Include="Controllers\ProgramadoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BANCO.cs" />
     <Compile Include="Models\CIDADE.cs" />
+    <Compile Include="Models\CidadesRepository.cs" />
     <Compile Include="Models\EstadosRepository.cs" />
     <Compile Include="Models\CONTAS_BANCARIAS.cs" />
     <Compile Include="Models\ESTADO.cs" />
@@ -231,6 +233,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="scripts\docs\" />
+    <Folder Include="Views\Cidades\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
