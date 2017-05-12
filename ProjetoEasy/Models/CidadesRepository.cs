@@ -20,9 +20,10 @@ namespace ProjetoEasy.Models
                            select c;
             foreach (var item in consulta.ToList())
             {
-                ListaDeCidades.Add(new CIDADE {
-                    CIDADEID= item.CIDADEID,
-                    NOME= item.NOME
+                ListaDeCidades.Add(new CIDADE
+                {
+                    CIDADEID = item.CIDADEID,
+                    NOME = item.NOME
                 });
             }
             return ListaDeCidades.ToList();

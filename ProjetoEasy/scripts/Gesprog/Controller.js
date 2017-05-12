@@ -1,16 +1,9 @@
-﻿angular.module('Gesprog')
-.controller('GesprogCtrl', function ($scope, GesprogService) {
-    $scope.cidades = null;
-        GesprogService.GetCityId().then(function (d) {
-        $scope.cidades = d.data; // Successo
-    }, function () {
-        alert('Ocorreu um erro'); // Falhou
-    });
-})
-.factory('GesprogService', function ($http) {
-    var fac = {};
-    fac.Cidades = function () {
-        return $http.get('/Programadores/GetCityId($scope.EstadoSelecionado)');
+﻿angular.module("Gesprog")
+.controller('GesprogCtrl', function ($scope, $http)
+{
+    $scope.getCities = function (id) {
+        $http.get('Cidades/GetCityId/' + id).then(function (response) {
+            $scope.cities = response.data;
+        })
     }
-    return fac;
 });

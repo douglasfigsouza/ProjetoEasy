@@ -11,14 +11,17 @@ namespace ProjetoEasy.Controllers
     public class CidadesController : Controller
     {
         CidadesRepository CidadeRep;
+        List<SelectListItem> ListaDeCidades;
         public CidadesController()
         {
             this.CidadeRep = new CidadesRepository();
+            this.ListaDeCidades = new List<SelectListItem>();
         }
         // GET: Cidades
         public JsonResult GetCityId(int Id)
-        {
-            return new JsonResult { Data = CidadeRep.GetCityId(Id), JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        { 
+            //return Json(new SelectList(ListaDeCidades, "Value", "Text", 0), JsonRequestBehavior.AllowGet);
+            return new JsonResult { Data =CidadeRep.GetCityId(Id),JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
     }
 }
