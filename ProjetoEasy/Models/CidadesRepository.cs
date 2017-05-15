@@ -17,7 +17,12 @@ namespace ProjetoEasy.Models
         public List<CIDADE> GetCityId(int Id)
         {
             var consulta = from c in context.CIDADE
-                           select c;
+                           join e in context.ESTADO on c.ESTADOID equals e.ESTADOID
+                           where e.ESTADOID.Equals(Id)
+                           select new {
+                               NOME = c.NOME,
+                               CIDADEID=c.CIDADEID
+                           };
             foreach (var item in consulta.ToList())
             {
                 ListaDeCidades.Add(new CIDADE

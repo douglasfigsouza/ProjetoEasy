@@ -19,7 +19,14 @@ namespace ProjetoEasy.Controllers
         }
         // GET: Cidades
         public JsonResult GetCityId(int Id)
-        { 
+        {
+
+            //ListaDeCidades.Add(new SelectListItem() { Text = "Selecione", Value = "0" });
+            //foreach (var item in CidadeRep.GetCityId(Id).ToList())
+            //{
+            //    ListaDeCidades.Add(new SelectListItem() { Text = item.NOME, Value = item.CIDADEID + "" });
+            //}
+            //return Json(new SelectList(ListaDeCidades, "Value", "Text", 0), JsonRequestBehavior.AllowGet);
             //return Json(new SelectList(ListaDeCidades, "Value", "Text", 0), JsonRequestBehavior.AllowGet);
             return new JsonResult { Data =CidadeRep.GetCityId(Id),JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
