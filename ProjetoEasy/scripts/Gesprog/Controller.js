@@ -3,8 +3,8 @@
 {
     $scope.getCities = function (id) {
         $http.get('Cidades/GetCityId/' + id).then(function (response) {
-            alert("teste");
             $scope.cities = response.data;
+            $scope.displayBlock = displayBlock;
         })
     }
 });

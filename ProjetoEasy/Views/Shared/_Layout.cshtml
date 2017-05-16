@@ -4,14 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/Estilo.css" rel="stylesheet"/>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/scripts/angular.js"></script>
-    <script src="~/scripts/Gesprog/Modules.js"></script>
-    <script src="~/scripts/Gesprog/Controller.js"></script>
-    <script src="~/scripts/Gesprog/Service.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/Jquery")
 </head>
 <body ng-controller="GesprogCtrl">
     <div class="navbar navbar-inverse navbar-fixed-top">

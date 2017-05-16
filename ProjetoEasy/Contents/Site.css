@@ -16,3 +16,20 @@ textarea {
     max-width: 280px;
 }
 
+/*Minhas Alterações*/
+.input_android {
+    border-style:none;
+    border-bottom:1px solid #cbc7c7;
+    margin-top:5px;
+    display:block;
+}
+/*Retira borda azul do input*/
+.input_android:focus {
+        outline:0 none;
+}
+.displayBlock {
+    display:block;
+}
+.displayNone {
+    display:none;
+}
