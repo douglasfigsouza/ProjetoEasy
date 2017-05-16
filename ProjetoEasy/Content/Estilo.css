@@ -11,3 +11,9 @@
 .input_android:focus {
         outline:0 none;
 }
+.displayBlock {
+    display:block;
+}
+.displayNone {
+    display:none;
+}
