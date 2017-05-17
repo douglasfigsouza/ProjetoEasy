@@ -20,5 +20,16 @@ namespace ProjetoEasy.Controllers
             ViewBag.Estados = EstadosRep.GetEstados();
             return View();
         }
+        [HttpPost]
+        private ActionResult Add_Programador(PROGRAMADORES programador)
+        {
+            if (ModelState.IsValid)
+            {
+                programador.NOME_PROG = programador.NOME_PROG;
+                programador.CIDADEID = programador.CIDADEID;
+                programador.EMAIL_PROG = programador.EMAIL_PROG;
+            }
+            return View();
+        }
     }
 }

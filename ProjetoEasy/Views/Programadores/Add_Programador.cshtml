@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row col-md-12">
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Programadores","Add_Programador"))
         {
             @Html.ValidationSummary(true)
             {
@@ -32,8 +32,8 @@
                        @Html.ValidationMessageFor(m => m.EMAIL_PROG)
                    </div>
                    @Html.DisplayFor(m=>m.CIDADEID, new {ng_model="programador.Cidadeid"})
-                   {{programador.Cidadeid}}
                </fieldset>
+               <button type="submit" class="btn btn-primary">Adicionar</button>
             }
         }
     </div>
