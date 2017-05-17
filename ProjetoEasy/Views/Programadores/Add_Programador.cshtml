@@ -20,7 +20,7 @@
                        @Html.Label("Estados", new { @class="control-label col-md-12"})
                        @Html.DropDownList("EstadoId", new SelectList(@ViewBag.Estados, "ESTADOID", "SIGLA"), "Selecione",new { @class = "form-control col-md-12", ng_model = "programador.EstadoSelecionado",ng_change= "getCities(programador.EstadoSelecionado)" })
                    </div>
-                   <div class="form-group col-md-4 displayNone">
+                   <div class="form-group col-md-4" ng-show="programador.EstadoSelecionado">
                        @Html.Label("Cidades", new { @class = "control-label col-md-12" })
                        <select ng-options="item.NOME for item in cities"ng-model="programador.Cidade" class="form-control col-md-12">
                            <option value="">Selecione</option>
@@ -35,7 +35,6 @@
                </fieldset>
             }
         }
-        {{programador.Cidade.CIDADEID}}
     </div>
 </div>
 
