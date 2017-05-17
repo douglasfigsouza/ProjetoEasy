@@ -25,8 +25,9 @@ namespace Gesprog
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Contents/css").Include(
                       "~/Contents/bootstrap.css",
+                      "~/Contents/bootstrap.min.css",
                       "~/Contents/Site.css"));
         }
     }

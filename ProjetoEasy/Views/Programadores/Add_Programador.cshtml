@@ -22,7 +22,7 @@
                    </div>
                    <div class="form-group col-md-4" ng-show="programador.EstadoSelecionado">
                        @Html.Label("Cidades", new { @class = "control-label col-md-12" })
-                       <select ng-options="item.NOME for item in cities"ng-model="programador.Cidade" class="form-control col-md-12">
+                       <select ng-options="item.NOME for item in cities"ng-model="programador.Cidade" ng-change="programador.Cidadeid=programador.Cidade.CIDADEID" class="form-control col-md-12">
                            <option value="">Selecione</option>
                        </select>
                    </div>
@@ -31,7 +31,8 @@
                        @Html.TextBoxFor(m => m.EMAIL_PROG, new { @class = "input_android col-md-12", @ng_model = "programador.Email", @placeholder = "Seu Email", ng_required = "Email"})
                        @Html.ValidationMessageFor(m => m.EMAIL_PROG)
                    </div>
-                   @Html.DisplayFor(m=>m.CIDADEID, new {ng_model="cidadeid"})
+                   @Html.DisplayFor(m=>m.CIDADEID, new {ng_model="programador.Cidadeid"})
+                   {{programador.Cidadeid}}
                </fieldset>
             }
         }
